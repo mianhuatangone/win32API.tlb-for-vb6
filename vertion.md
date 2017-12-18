@@ -1,5 +1,3 @@
-# win32API.tlb-for-vb6
-win32API.tlb for visual basic 6.0
 显示版本：2017-11-10
 更新日期：2017-12-12
 下载地址：https://github.com/mianhuatangone/win32API.tlb-for-vb6/raw/master/Win32Api.tlb
