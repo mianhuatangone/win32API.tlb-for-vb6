@@ -1,4 +1,4 @@
-vertion_start##
+version_start##
 显示版本：2017-11-10
 
 更新日期：2017-12-12
@@ -8,4 +8,4 @@ vertion_start##
 QQ群：
 
 更新说明：修正MultiByteToWideChar、WideCharToMultiByte函数参数类型为void*，使用string不兼容。修正WideCharToMultiByte、WideCharToMultiByteL、WideCharToMultiByteP三函数的参数类型不兼容性，将参数lpDefaultChar、lpUsedDefaultChar类型改为void*，原始的LPBOOL在vb中无法完美使用
-##vertion_end
+##version_end
