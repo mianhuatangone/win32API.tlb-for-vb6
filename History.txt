@@ -1,0 +1,260 @@
+2018年5月7日
+修正Shell_NotifyIcon函数参数类型错误
+修正NOTIFYICONDATAA NOTIFYICONDATAW结构体定义错误
+添加若干Shell32的常量
+
+
+2018年4月30日
+添加未公开MD5系列API函数：MD5Init MD5Update MD5Final
+
+2018年3月31日
+修正GDI+中PointF的类型定义错误
+
+2018年3月7日
+修正keybd_event函数参数顺序错误
+添加msvcrt若干函数
+
+
+2018年1月21日
+修正QueryPathOfRegTypeLib函数声明错误
+
+2017年12月24日
+修正VerQueryValue函数导入点错误问题
+
+
+2017年12月17日
+添加Win32API AddIn.dll扩展，实现自动添加tlb
+
+
+2017年11月10日
+修正MultiByteToWideChar、WideCharToMultiByte函数参数类型为void*，使用string不兼容
+修正WideCharToMultiByte、WideCharToMultiByteL、WideCharToMultiByteP三函数的参数类型不兼容性，将参数lpDefaultChar、lpUsedDefaultChar类型改为void*，原始的LPBOOL在vb中无法完美使用
+
+
+
+2017年10月20日
+修复SHBrowseForFolder函数的导入点问题，以及乱码问题
+修正BROWSEINFO结构体声明
+
+
+2017年9月27日
+修正GdipGetImageThumbnail函数声明错误
+
+
+2017-5-4
+修正SendMessage及重载声明的规范
+
+
+2017-4-29
+添加wlanapi.dll(winXP以上无线网络/适配器控制)的全部函数，位于模块wlanapi中，此模块之前是空的
+修正以下函数声明错误
+GetKeyNameText
+GetKeyboardLayoutName
+QueryFullProcessImageName
+GetShortPathName
+PathFindOnPath
+CreateTypeLib
+
+
+2017-4-19
+修正CallWindowProcW和CallWindowProcA的函数声明错误
+
+
+2017年2月12日
+添加WinHttp.dll里的全部函数、结构、常量
+
+
+2017年2月11日
+添加函数IIDFromString
+
+
+2017年2月10日
+添加函数SHGetSpecialFolderPath 
+添加函数MiniDumpWriteDump
+添加MiniDump系列开头的22个常量
+
+
+2017年2月6日
+修正GdiplusStartup函数声明异常
+修改（删除）多处函数、类方法里的optional关键字。因vb6并不支持此关键字，
+msdn原型中的_opt_标识与vb6的optional意义不同，API函数参数不可省略。
+
+2016年7月24日
+重新对HRESULT枚举常量归类，添加100+的HRESULT常数值
+
+
+2016年7月18日
+修复tlb中唯一重复的常量声明FileBothDirectoryInformation。
+
+
+
+2016年7月17日
+对所有常量去重复完成
+Win32API.tlb工程正式完成。
+tlb以后的CLSID以及version注册版本不会再修改，以后更新的tlb您可以直接替换文件
+
+注：因工程量巨大，难免会有bug，以后使用过程中逐渐修复，欢迎联系作者,本人唯一QQ：1037431656
+本工程作者QQ：1037431656 82850696，特别致谢百度vb吧的yjryym
+
+
+
+2016年7月10日
+添加3000+常数声明
+重新归类常数所在模块
+添加所有常量
+
+
+2016年6月25日
+修正CreateStreamOnHGlobal函数声明错误
+紧急修正GDI+和GDI系列以及ole32部分函数名、参数名的命名错误200余处，将之前的PoLONG修正为Point
+原因是合作者使用有bug的正则导致命名错误。
+
+
+
+2016年6月23日
+修改结构体INPUT的名字与vb关键字重名的问题，使用别名INPUTAPI
+
+
+2016年6月19日
+修正OleCreatePictureIndirectPic函数命名错误
+正式为tlb更名：“Win32API之vb6头文件”
+当前版本号：“2016-6-19添加更新”
+
+
+2016年6月12日
+修正StringFromCLSID StringFromGUID2 ProgIDFromCLSID CLSIDFromString 
+CLSIDFromProgIDEx CLSIDFromProgID等函数的参数类型错误问题
+添加msvcrt部分函数
+添加数据类型：
+intptr_t       = vb的long
+size_t         = vb的long
+
+
+2016年6月11日
+添加结构体POINT的别名“POINTAPI”。msdn本来是POINT，但vb中全部采用POINTAPI，
+为保持兼容性，给POINT添加别名POINTAPI
+添加ntdll部分函数
+添加psapi.dll全部函数
+至此，tlb中包含的声明达到3423条
+添加数据类型：
+NTSTATUS       = vb的long
+
+
+2016年6月7日
+正式版tlb发布，版本名称“2016-6-7完整3370条API函数重大更新”，至此，tlb中包含的声明达到3370条
+丢弃2条vb自带的函数声明，这两条是从win2000就已淘汰的API声明，dll中已找不到
+添加285条vb声明以及需要使用的多个结构体
+vbAPI转换项目完成，至此，vb6自带的所有函数声明已全部包含
+发现多处vb6自带声明错误、导入点错误问题，并在tlb中以正确方式声明
+
+
+
+2016年6月4日
+添加230条vb声明以及需要使用的多个结构体
+
+
+2016年6月3日
+添加170条vb声明以及需要使用的多个结构体
+
+
+2016年6月2日
+添加180条vb声明以及需要使用的多个结构体
+
+
+2016年4月24日
+修正UUID GUID CLSID结构体不能实例化的问题
+命名GUID结构体，为其添加别名：UUID CLSID IID，解决实例化问题
+添加数据类型：
+BOOL            = vb的long 
+（注：注意BOOL不等于bool或者Boolean。很多人以为BOOL就像Boolean一样）
+（然后把BOOL声明成枚举类型{TRUE，FALSE}，其实这是错误的）
+（MSDN原始定义：BOOL是三值逻辑类型，大于0，小于0，等于0，占用4字节）
+INT16           = vb的Integer
+INT32           = vb的long
+INT64           = vb的Currency
+LPSTR=char*     = vb的String
+LPWSTR=wchar_t* = vb的String
+
+
+
+2016年4月2日
+修正SafeArrayGetDim SafeArrayGetDimL SysAllocString SysAllocStringLen SysFreeString
+OleCreatePictureIndirec等函数的声明错误
+使用正则表达式，修正所有函数返回类型不能被vb6正确识别的函数
+
+
+2016年1月
+更改重载版本的函数命名规则
+使用正则表达式，修正所有函数命名规则
+dll导入点是A版(ANSI)                                  ——  函数添加后缀A
+dll导入点是W版(Unicode)                               ——  函数添加后缀W
+msdn标准声明                                          ——  函数名用原始名字
+msdn标准声明带指针的，重载版本声明为byval long        ——  函数名添加后缀L
+msdn标准声明带指针的，重载版本声明为byref long        ——  函数名添加后缀P
+msdn标准声明是字符串指针，重载版本声明为byval long    ——  函数名添加后缀L、S、Str
+msdn标准声明是void*，重载版本声明为byref any          ——  保持原始声明不变
+msdn标准声明是IDispatch*，重载版本声明为byref object  ——  函数名添加后缀Obj
+msdn标准声明参数中带IUnknown*                         ——  函数参数一律byval long
+msdn标准声明参数中带IUnknown**                        ——  函数参数一律byref long
+
+
+2015年11月
+修正kernel32 user32 gdi32 oleaut32 ole32 gdiplus中的指针参数错误
+
+
+2015年8月
+添加130+条vb自带声明
+修正VarPtr GetWindowText ShowWindow CopyMemory等函数声明
+修正SendMessage PostMessage的函数命名规则
+
+
+2015年7月底
+为部分函数的常量值组合成枚举类型，这样在IDE中写代码时有自动提示
+发现vb自带的API浏览器中很多函数仍然没有被tlb包含
+启动vb6API转换项目
+
+
+2015年7月
+陆续添加1300左右函数声明，此时共包括2500+条声明
+包括advapi32 shlwapi oleaut32 ole32 msvbvm60 mpr wininet netapi32 ntdll winsock
+msimg32 kernel32 gdi32 urlmon 等函数
+
+
+2015年6月
+解决DWORD WORD char LPARAM WPARAM HWND HDC HINSTANCE等等相关数据类型的识别问题
+添加comdlg32 Comctl32等函数
+
+
+2015年4月
+第一版tlb发布，但随后发现无符号相关的数据类型vb6无法正常识别
+工程进入兼容性测试阶段
+Win32Api.tlb工程项目由两人共同完成，转变为独自一人继续维护、添加
+
+
+2015年2月底
+使用正则表达式初步修正各版本的函数命名规则，添加300+常量声明
+
+
+2015年2月
+添加600+条常用API，包括kernel32 user32 oleaut32 ole32等声明
+
+
+2015年1月
+添加GDI+系列函数声明
+初步命名tlb名称：“Win32API and GdiPlus类型库”
+
+
+2014年12月
+初步完成500+条函数入口点修正
+结构体重名问题，初步采用再次命名法临时解决
+
+
+2014年11月底
+确定工程的CLSID：{13fc9823-115e-4cb2-9a02-881895942e28}，可进入注册表编辑器查找此子键
+由两个人共同完成添加500+条API函数声明，入口点修正
+但因结构体重名问题，无法正常编译
+
+
+2014年11月初
+启动Win32API.tlb工程项目，参考于网上各种版本的API相关tlb
+但各自都不完整，甚至有些明显导入点不正确
